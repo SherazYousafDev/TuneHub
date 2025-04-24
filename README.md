@@ -4,7 +4,8 @@ A sleek web-based Music player with support for playlists,  responsive design, a
 
 ## 📸 Preview
 
-![Preview-image](https://github.com/user-attachments/assets/95795ad4-c49d-4a64-afdf-c96f79af956b)
+
+![Preview-image](https://github.com/user-attachments/assets/73077310-fd01-4c35-a498-ab7d139fce24)
 
 
 ## 🚀 Features
@@ -29,6 +30,7 @@ Fully responsive layout that works on all screen sizes — desktop, tablet, and 
 
 ## 🌐 Live Demo
 
+https://sherazyousafdev.github.io/TuneHub/
 
 
 
