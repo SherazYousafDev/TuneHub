@@ -1,0 +1,351 @@
+/* Reset and Base Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* outline: 1px solid red; */
+}
+
+/* Reused Styles */
+:root {
+  /* Background */
+
+  --header: linear-gradient(
+    90deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(343deg 0% 6%) 17%,
+    hsl(343deg 0% 10%) 34%,
+    hsl(344deg 0% 13%) 50%,
+    hsl(344deg 0% 17%) 64%,
+    hsl(344deg 0% 20%) 75%,
+    hsl(344deg 0% 24%) 82%,
+    hsl(344deg 0% 28%) 87%,
+    hsl(344deg 0% 32%) 91%,
+    hsl(344deg 0% 36%) 94%,
+    hsl(344deg 0% 40%) 97%,
+    hsl(344deg 0% 44%) 98%,
+    hsl(0deg 0% 48%) 100%
+  );
+
+  --main-bg: linear-gradient(
+    80deg,
+    hsl(115deg 11% 38%) 0%,
+    hsl(114deg 11% 34%) 0%,
+    hsl(114deg 11% 31%) 0%,
+    hsl(114deg 11% 27%) 1%,
+    hsl(114deg 11% 24%) 2%,
+    hsl(114deg 10% 21%) 4%,
+    hsl(114deg 10% 18%) 7%,
+    hsl(114deg 9% 15%) 12%,
+    hsl(113deg 8% 12%) 18%,
+    hsl(112deg 7% 9%) 27%,
+    hsl(112deg 9% 5%) 41%,
+    hsl(0deg 0% 0%) 82%
+  );
+
+  --sec-bg: #41494e;
+  --tri-bg: rgba(0, 0, 0, 0.192);
+
+  /* Colors */
+  --primary-col: #9dc08b;
+  --secondary-col: #fafafa;
+
+  /* Borders */
+  --border: 8px solid var(--primary-col);
+
+  /* Shadows */
+  --shad: 2px 2px 15px rgba(0, 0, 0, 0.078);
+  --poster-shad: 2px 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 80px;
+  background-image: var(--header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: var(--secondary-col);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-col);
+}
+
+#playlist-icon:hover {
+  scale: 105%;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main Layout */
+.container {
+  background-image: var(--main-bg);
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: relative;
+}
+
+/* Left Box */
+.left-box-wrapper {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Song Poster */
+.song-poster {
+  width: 450px;
+  height: 450px;
+  background-image: url(../images/poster-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: var(--poster-shad);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.song-poster:hover {
+  scale: 105%;
+}
+
+/* Volume Controls */
+.volume-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.volume-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shad);
+  transition: background-color 0.3s ease;
+}
+
+.volume-btn:hover {
+  background-color: var(--primary-col);
+}
+
+#v-slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 5px;
+  background-color: var(--sec-bg);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#v-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-col);
+  border: var(--border);
+  border-radius: 50%;
+}
+
+/* Right Box */
+.right-box-wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  gap: 10px;
+}
+
+/* Song Details */
+.details {
+  width: 100%;
+}
+
+.song-title {
+  font-size: 65px;
+  margin-bottom: 20px;
+  color: var(--primary-col);
+  text-transform: uppercase;
+}
+
+.song-artist {
+  font-size: 20px;
+  color: var(--secondary-col);
+  letter-spacing: 1px;
+}
+
+/* player-controls */
+.player-controls {
+  width: 100%;
+}
+
+/* Song Duration Slider */
+#song-duration {
+  -webkit-appearance: none;
+  width: 60%;
+  height: 5px;
+  background-color: var(--sec-bg);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--shad);
+  margin-bottom: 10px;
+}
+
+#song-duration::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-col);
+  border: var(--border);
+  border-radius: 50%;
+}
+
+.time-wrapper {
+  width: 60%;
+  color: var(--secondary-col);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Controls */
+.control-btns {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.control-btns img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btns img:hover {
+  scale: 110%;
+}
+
+#play {
+  width: 70px;
+  height: 70px;
+}
+
+/* Playlist-section */
+.playlist-box {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(222, 222, 222, 0.192);
+  backdrop-filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.playlist-box.active {
+  transform: translateX(0%);
+}
+
+.playlist-songs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #9dc08b75;
+  color: var(--secondary-col);
+  transition: all 0.5s;
+}
+
+.playlist-songs:hover {
+  background-color: #466e32b7;
+}
+
+.playlist-songs img {
+  width: 90px;
+  height: auto;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.song-details {
+  margin-bottom: 2px;
+}
+
+.song-details h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.song-details span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.playlist-box p {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--secondary-col);
+  font-size: 14px;
+}
+
+.red-heart {
+  color: red;
+}
+
+.playlist-box .name {
+  color: var(--primary-col);
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

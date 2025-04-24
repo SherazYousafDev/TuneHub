@@ -1,0 +1,347 @@
+/* Media Queries for Responsive Design - Fixed for No Horizontal Scroll */
+
+/* Base fixes to prevent horizontal scroll on all devices */
+
+/* Large Tablets (992px and below) */
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .left-box-wrapper,
+  .right-box-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left-box-wrapper {
+    height: 50%;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .right-box-wrapper {
+    height: 50%;
+    padding: 0 10px 20px;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .song-poster {
+    width: 350px;
+    height: 350px;
+    max-width: 90%;
+  }
+
+  .song-title {
+    font-size: 40px;
+    word-break: break-word;
+  }
+
+  #song-duration,
+  .time-wrapper,
+  .control-btns {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .volume-box {
+    margin-top: -20px;
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .playlist-box {
+    width: 50%;
+  }
+}
+
+/* Medium Tablets and Large Phones (768px and below) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 15px;
+  }
+
+  .song-poster {
+    width: 250px;
+    height: 250px;
+  }
+
+  .left-box-wrapper {
+    gap: 20px;
+  }
+
+  .song-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .song-artist {
+    font-size: 16px;
+  }
+
+  .control-btns {
+    gap: 20px;
+  }
+
+  #play {
+    width: 60px;
+    height: 60px;
+  }
+
+  .playlist-box {
+    width: 70%;
+  }
+}
+
+/* Small Phones (576px and below) */
+@media screen and (max-width: 576px) {
+  header {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .logo-box h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    height: calc(100vh - 60px);
+    padding: 5px;
+  }
+
+  .song-poster {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  .volume-box {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  #v-slider {
+    width: 40%;
+  }
+
+  .song-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .song-artist {
+    font-size: 14px;
+  }
+
+  #song-duration,
+  .time-wrapper,
+  .control-btns {
+    width: 100%;
+  }
+
+  .control-btns {
+    gap: 15px;
+  }
+
+  .control-btns img {
+    width: 25px;
+    height: 25px;
+  }
+
+  #play {
+    width: 45px;
+    height: 45px;
+  }
+
+  .playlist-box {
+    width: 80%;
+  }
+
+  .playlist-songs {
+    gap: 10px;
+  }
+
+  .playlist-songs img {
+    width: 60px;
+  }
+
+  .song-details h3 {
+    font-size: 14px;
+  }
+
+  .song-details span {
+    font-size: 10px;
+  }
+}
+
+/* Extra Small Phones (375px and below) */
+@media screen and (max-width: 375px) {
+  .song-poster {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+  }
+
+  .left-box-wrapper {
+    gap: 10px;
+  }
+
+  .volume-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .volume-box {
+    padding: 0 5px;
+  }
+
+  .song-title {
+    font-size: 22px;
+  }
+
+  .song-artist {
+    font-size: 12px;
+  }
+
+  .control-btns {
+    gap: 10px;
+  }
+
+  #play {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playlist-songs img {
+    width: 50px;
+  }
+
+  .playlist-box {
+    width: 95%;
+  }
+}
+
+/* Height-based media query for short screens */
+@media screen and (max-height: 600px) {
+  .container {
+    padding: 5px;
+  }
+
+  .song-poster {
+    width: 160px;
+    height: 160px;
+  }
+
+  .left-box-wrapper {
+    gap: 8px;
+  }
+
+  .right-box-wrapper {
+    gap: 5px;
+  }
+
+  .song-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+
+  .time-wrapper {
+    margin-bottom: 10px;
+  }
+}
+
+/* Landscape mode for mobile devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .container {
+    flex-direction: row;
+    padding: 5px;
+  }
+
+  .left-box-wrapper,
+  .right-box-wrapper {
+    height: 100%;
+    padding: 5px;
+  }
+
+  .left-box-wrapper {
+    width: 35%;
+  }
+
+  .right-box-wrapper {
+    width: 65%;
+  }
+
+  .song-poster {
+    width: 130px;
+    height: 130px;
+  }
+
+  .volume-box {
+    margin-top: 2px;
+    padding: 0;
+  }
+
+  #v-slider {
+    width: 50%;
+  }
+
+  .song-title {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  .time-wrapper {
+    margin-bottom: 5px;
+  }
+
+  .control-btns {
+    gap: 15px;
+  }
+
+  #play {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playlist-box {
+    width: 70%;
+  }
+}
+
+/* Very small devices - additional fixes */
+@media screen and (max-width: 320px) {
+  .song-poster {
+    width: 150px;
+    height: 150px;
+  }
+
+  .song-title {
+    font-size: 20px;
+  }
+
+  .control-btns img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #play {
+    width: 35px;
+    height: 35px;
+  }
+}

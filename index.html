@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icons/favicon.svg"
+      type="image/x-icon"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Media Queries -->
+    <link rel="stylesheet" href="./assets/css/media.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <div class="logo-box">
+        <img src="./assets/images/icons/logo.svg" alt="" />
+        <h2>TuneHub</h2>
+      </div>
+      <img src="./assets/images/icons/playlist.svg" id="playlist-icon" />
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <div class="container">
+      <div class="left-box-wrapper">
+        <div class="song-poster"></div>
+        <div class="volume-box">
+          <div class="volume-btn">
+            <img src="./assets/images/icons/volume.svg" id="volSvg" />
+          </div>
+          <input type="range" id="v-slider" onchange="volume()" />
+        </div>
+      </div>
+      <div class="right-box-wrapper">
+        <div class="details">
+          <h2 class="song-title">Ishq</h2>
+          <span class="song-artist">Faheem</span>
+        </div>
+        <div class="player-controls">
+          <input
+            type="range"
+            id="song-duration"
+            min="0"
+            value="0"
+            oninput="changeDuration(this.value)"
+          />
+          <div class="time-wrapper">
+            <span id="current-time">0:00</span>
+            <span id="total-duration">0:00</span>
+          </div>
+          <div class="control-btns">
+            <div class="pre-img">
+              <img
+                src="./assets/images/icons/pre.svg"
+                id="pre"
+                onclick="preSong()"
+              />
+            </div>
+            <div class="play-img">
+              <img
+                src="./assets/images/icons/play.svg"
+                id="play"
+                onclick="playPause()"
+              />
+            </div>
+            <div class="next-img">
+              <img
+                src="./assets/images/icons/next.svg"
+                id="next"
+                onclick="nextSong()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Playlist-section start -->
+      <div class="playlist-box">
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-1.jpg" />
+          <div class="song-details">
+            <h3>ISHQ</h3>
+            <span>Faheem Abdullah x Rauhan Malik</span>
+          </div>
+        </div>
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-2.jpg" />
+          <div class="song-details">
+            <h3>jhol</h3>
+            <span>Maanu x Annural Khalid</span>
+          </div>
+        </div>
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-3.jpg" />
+          <div class="song-details">
+            <h3>heer</h3>
+            <span>Ali Raza x Shjar</span>
+          </div>
+        </div>
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-4.jpg" />
+          <div class="song-details">
+            <h3>Nahin Milta</h3>
+            <span>Bayaan</span>
+          </div>
+        </div>
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-5.jpg" />
+          <div class="song-details">
+            <h3>Die With A Smile</h3>
+            <span>Lady Gaga x Bruno Mars</span>
+          </div>
+        </div>
+        <div class="playlist-songs">
+          <img src="./assets/images/poster-6.jpg" />
+          <div class="song-details">
+            <h3>Pal pal</h3>
+            <span>Afusic x Talwiinder</span>
+          </div>
+        </div>
+        <p>
+          Made With<span class="red-heart"> ❤ </span>By
+          <span class="name">Sheraz Yousaf.</span>
+        </p>
+      </div>
+      <!-- Playlist-section End -->
+    </div>
+    <!-- Main End -->
+
+    <!-- JS Link -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
